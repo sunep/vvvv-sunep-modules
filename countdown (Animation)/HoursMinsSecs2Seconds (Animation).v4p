@@ -1,0 +1,109 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta22.dtd" >
+   <PATCH nodename="C:\documents\My Dropbox\_vvvv_patches\Countdown\HoursminsSecs2Seconds (Animation).v4p">
+   <BOUNDS height="4860" left="10650" top="6660" type="Window" width="4080">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="36" top="12" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="36" top="12" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="10344" top="6480" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Hours">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="936" top="24" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="936" top="24" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="10584" top="6720" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mins">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1908" top="36" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1908" top="36" type="Box" width="804">
+   </BOUNDS>
+   <BOUNDS height="160" left="10824" top="6960" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="seconds">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="4" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="768" top="720" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="24">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Input 1" srcnodeid="7" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="Add (Value)">
+   <BOUNDS height="0" left="768" top="1188" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input 1" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input 2" srcnodeid="6" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="768" top="1608" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Input 1" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Add (Value)">
+   <BOUNDS height="0" left="768" top="2028" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input 1" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Input 2" srcnodeid="5" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="12" top="2748" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="12" top="2748" type="Box" width="804">
+   </BOUNDS>
+   <BOUNDS height="160" left="11064" top="7200" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="seconds">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   </PATCH>
