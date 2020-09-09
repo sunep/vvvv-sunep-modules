@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\documents\Dropbox\___Work\Contributions\sunep-vvvv-modules\Clock\Clock (Time) help.v4p" systemname="Clock (Time) help" filename="D:\documents\Dropbox\___Work\Contributions\sunep-vvvv-modules\Clock\Clock (Time) help.v4p">
+   <BOUNDS type="Window" left="1582" top="1953" width="8995" height="8995">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="addonpack" Version="40.0.0">
+   </PACK>
+   <NODE systemname="Clock (Time)" filename="Clock (Time).v4p" nodename="Clock (Time)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="5880" top="952" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Time As String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="161" top="154" width="2632" height="210">
+   </BOUNDS>
+   <BOUNDS type="Box" left="161" top="154" width="3108" height="364">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Outputs current time as String|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="3" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
+   <PIN pinname="Input String" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS height="0" left="427" top="1463" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1650" left="427" top="1463" type="Box" width="5505">
+   </BOUNDS>
+   <BOUNDS height="160" left="20070" top="13620" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="55">
+   </PIN>
+   <PIN pinname="Output String" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="|Time As String|">
+   </PIN>
+   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Character Encoding" pintype="Configuration" slicecount="1" values="ANSI">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Time As String" dstnodeid="3" dstpinname="Input String">
+   </LINK>
+   </PATCH>

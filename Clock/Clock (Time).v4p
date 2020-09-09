@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\documents\Dropbox\___Work\Contributions\sunep-vvvv-modules\Clock\Clock (Time).v4p">
+   <BOUNDS height="5999" left="16905" top="3563" type="Window" width="8995">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="6" nodename="CurrentTime (Astronomy)" systemname="CurrentTime (Astronomy)">
+   <BOUNDS height="0" left="15" top="0" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Current Time" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="Gregorian (Astronomy Split)" systemname="Gregorian (Astronomy Split)">
+   <BOUNDS height="0" left="60" top="345" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="Hour" visible="1">
+   </PIN>
+   <PIN pinname="Minute" visible="1">
+   </PIN>
+   <PIN pinname="Second" visible="1">
+   </PIN>
+   <PIN pinname="Millisecond" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Time" srcnodeid="6" srcpinname="Current Time">
+   </LINK>
+   <NODE componentmode="Hidden" id="4" nodename="AsString (Value)" systemname="AsString (Value)">
+   <BOUNDS height="0" left="135" top="1245" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="135" top="1245" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="21390" top="7575" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="3" nodename="Pad (String)" systemname="Pad (String)">
+   <BOUNDS height="0" left="135" top="1590" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Padding" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Align" slicecount="1" values="Right">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
+   <BOUNDS height="0" left="135" top="900" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="W" visible="1">
+   </PIN>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="X" srcnodeid="5" srcpinname="Hour">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Y" srcnodeid="5" srcpinname="Minute">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Z" srcnodeid="5" srcpinname="Second">
+   </LINK>
+   <LINK dstnodeid="4" dstpinname="Input" srcnodeid="2" srcpinname="XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Add (String Spectral)" systemname="Add (String Spectral)">
+   <BOUNDS height="0" left="135" top="1920" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Colon">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="0" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
+   <PIN pinname="Input String" pintype="Input" visible="1" slicecount="1" values="2020.09.09-07.35.14">
+   </PIN>
+   <BOUNDS height="0" left="165" top="2355" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1650" left="165" top="2355" type="Box" width="5505">
+   </BOUNDS>
+   <BOUNDS height="160" left="20070" top="13620" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="55">
+   </PIN>
+   <PIN pinname="Output String" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="|Time As String|">
+   </PIN>
+   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Character Encoding" pintype="Configuration" slicecount="1" values="ANSI">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="addonpack" Version="40.0.0">
+   </PACK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input String">
+   </LINK>
+   </PATCH>
