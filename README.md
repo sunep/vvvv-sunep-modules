@@ -1,5 +1,5 @@
 # sunep vvvv modules
-Here I keep my collection of little modules that might be relevant for others as wel as myself
+Here I keep my collection of little modules that might be relevant for others as well as myself
 
 What's in here?
   * Clock (Time) a clock for your patch, shows the time in 24h format as string.
