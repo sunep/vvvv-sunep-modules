@@ -29,7 +29,7 @@
     ************************ AudioPlayerSR ************************
 
 -->
-          <Node Name="AudioPlayerSR" Bounds="729,362" Id="OKYZ7fr0uMxLVdj0Iwv4AO">
+          <Node Name="AudioPlayerSR" Bounds="690,402" Id="OKYZ7fr0uMxLVdj0Iwv4AO">
             <p:NodeReference>
               <Choice Kind="ContainerDefinition" />
             </p:NodeReference>
