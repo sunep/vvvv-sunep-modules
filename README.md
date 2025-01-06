@@ -1,4 +1,4 @@
-# sunep vvvv modules
+# sunep vvvv Beta modules
 Here I keep my collection of little modules that might be relevant for others as well as myself
 
 What's in here?
