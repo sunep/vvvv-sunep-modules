@@ -261,7 +261,7 @@
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="LuwywtaYj7sQEFoVYL65je" Comment="Filename" Bounds="130,243,333,21" ShowValueBox="true" isIOBox="true" Value="..\..\Assets\av av.wav">
+          <Pad Id="LuwywtaYj7sQEFoVYL65je" Comment="Filename" Bounds="130,243,333,21" ShowValueBox="true" isIOBox="true" Value="Assets\av av.wav">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
